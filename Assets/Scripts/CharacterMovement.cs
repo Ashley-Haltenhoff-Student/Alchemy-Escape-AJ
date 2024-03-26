@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
         moveDirection.Normalize();
         moveDirection.y = -1f;
 
-        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
+        characterController.Move(moveSpeed * Time.deltaTime * moveDirection);
     }
 
     public void AddMoveInput(float forwardInput, float rightInput)
@@ -31,6 +31,6 @@ public class CharacterMovement : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
-        Vector3 moveDirection = (forwardInput * forward) + (rightInput * right);
+        moveDirection = (forwardInput * forward) + (rightInput * right);
     }
 }
