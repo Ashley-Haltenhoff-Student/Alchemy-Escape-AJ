@@ -21,7 +21,7 @@ public class PlayerInteractions : MonoBehaviour
             targetInteraction = raycastHit.collider.gameObject.GetComponent<InteractionObject>();
         }
 
-        if (targetInteraction)
+        if (targetInteraction && targetInteraction.enabled)
         {
             interactionText = targetInteraction.GetInteractionText();
         }
@@ -39,7 +39,7 @@ public class PlayerInteractions : MonoBehaviour
 
     public void TryInteract()
     {
-        if (targetInteraction)
+        if (targetInteraction && targetInteraction.enabled)
         {
             targetInteraction.Interact();
         }
