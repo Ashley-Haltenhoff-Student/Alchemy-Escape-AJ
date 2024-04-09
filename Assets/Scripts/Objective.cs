@@ -7,7 +7,6 @@ public class Objective : MonoBehaviour
     [SerializeField] private Text objectiveDisplay;
 
     [SerializeField] private string objectiveText = "I am an objective :)";
-    [SerializeField] private string completedText = "!!!";
 
     public UnityEvent onCompleteObjective = new UnityEvent();
 
